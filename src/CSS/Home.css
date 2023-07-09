@@ -1,0 +1,139 @@
+.home {
+  height: 100vh;
+  width: 100vw;
+}
+
+.home .content {
+  height: 400px;
+  width: 400px;
+  overflow: auto;
+  /* background-color: aliceblue; */
+}
+.content .suggestion {
+  display: flex;
+  justify-content: space-between;
+}
+.sidebar {
+  height: 100%;
+  width: 25%;
+  background-color: #000000;
+  position: sticky;
+  float: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.home .cont {
+  height: 100%;
+  width: 75%;
+  float: right;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  background-color: blueviolet;
+}
+.cont nav {
+  height: 10%;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-shrink: 0;
+}
+.sidebar .logo {
+  height: 120px;
+  width: 95%;
+  background-color: rgb(17, 17, 17);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.icon {
+  display: flex;
+  height: 70px;
+  width: 95%;
+  align-items: center;
+  margin: 10px;
+  border-radius: 20px;
+  color: white;
+  padding-left: 10px;
+}
+.icon h3 {
+  margin-left: 20px;
+}
+
+.sidebar .icon:hover {
+  background-color: rgb(17, 17, 17);
+}
+.navbar-search {
+  width: 90%;
+  height: 100%;
+  background-color: rgb(17, 17, 17);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.navbar-search .search {
+  height: 100%;
+  width: 45%;
+  position: absolute;
+  background-color: rgb(17, 17, 17);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.search .MuiTextField-root {
+  width: 90%;
+  height: 40px;
+  background-color: rgb(36, 36, 36);
+  border-radius: 20px;
+}
+.avatar {
+  width: 10%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(17, 17, 17);
+}
+.sidebar :nth-child(4) {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 10px;
+  width: 93%;
+}
+.sidebar :nth-child(4) div {
+  display: flex;
+  justify-content: space-between;
+}
+.content .suggestion {
+  display: flex;
+  justify-content: space-between;
+  background-color: aliceblue;
+  padding: 2%;
+}
+.suggestion:hover {
+  background-color: rgb(153, 153, 153);
+}
+.suggestion .title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 85%;
+}
+
+.home .browse {
+  height: 3%;
+  width: 100%;
+}
+.cont .grid {
+  height: fit-content;
+  width: 100%;
+  overflow: hidden;
+}
+.more1 {
+  height: 3%;
+  width: 100%;
+}

@@ -1,0 +1,123 @@
+.song {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+}
+
+.song .sidebar {
+  height: 100%;
+  width: 25%;
+  background-color: #000000;
+  position: sticky;
+  float: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.song-det {
+  height: 100%;
+  width: 75%;
+}
+
+.song-det nav {
+  height: 10%;
+  width: 100%;
+  position: sticky;
+  display: flex;
+  top: 0;
+}
+.song-det .navbar-search {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(17, 17, 17);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.det1 {
+  width: 100%;
+  height: 50%;
+  background: rgb(180, 60, 201);
+  background: linear-gradient(
+    90deg,
+    rgba(92, 31, 102, 1) 0%,
+    rgb(163, 55, 181) 35%,
+    rgba(180, 60, 201, 1) 100%
+  );
+  display: flex;
+  flex-direction: row;
+}
+.det1 .song-image {
+  height: 60%;
+  width: 25%;
+  margin-top: 7%;
+  margin-left: 2%;
+}
+.det1 .desc {
+  margin-top: 9%;
+  height: 60%;
+  width: 90%;
+  margin-left: 3%;
+  /* background-color: aliceblue; */
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  justify-content: space-evenly;
+}
+.desc .desc-art {
+  display: flex;
+  align-items: center;
+  /* background-color: aqua; */
+}
+.desc-art h5 {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.desc-art img {
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.det2 {
+  height: 40%;
+  width: 100%;
+  background-color: rgb(70, 25, 78);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.det2 .more {
+  height: 32%;
+  width: 100%;
+  /* background-color: beige; */
+  display: flex;
+  align-items: center;
+}
+
+.det2 .artist {
+  height: 70%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+.desc h1 {
+  font-size: 70px;
+}
+.audio {
+  width: 600px;
+}
+.rhap_container {
+  background-color: #000000;
+}
+
+.more img {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
