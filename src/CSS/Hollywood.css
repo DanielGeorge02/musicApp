@@ -32,7 +32,8 @@
   transition: 0.8s ease-out;
 }
 .item:hover {
-  opacity: 0.8;
+  opacity: 0.5;
+  box-shadow: 2px 2px 20px 2px #f8f4f5;
   text-align: center;
   text-transform: capitalize;
 }

@@ -1,5 +1,13 @@
 import React, { useEffect, useState } from "react";
-
+import { AiFillHome, AiOutlineHome } from "react-icons/ai";
+import { IoAddSharp } from "react-icons/io5";
+import {
+  BiSearchAlt2,
+  BiSolidSearchAlt2,
+  BiSolidPlaylist,
+} from "react-icons/bi";
+import CloseIcon from "@mui/icons-material/Close";
+import MenuIcon from "@mui/icons-material/Menu";
 import AudioPlayer from "react-h5-audio-player";
 import "react-h5-audio-player/lib/styles.css";
 import { MdFavoriteBorder } from "react-icons/md";
@@ -7,11 +15,26 @@ import "../CSS/Song.css";
 import play from "../image/play-button.png";
 import pause from "../image/pause.png";
 import Tooltip from "@mui/material/Tooltip";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const Song = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
   const [song, setSong] = useState();
   const [audio, setaudio] = useState();
   const [isPlaying, setIsPlaying] = useState(false);
+  const [isSidebarAVisible, setSidebarAVisible] = useState(true);
+  const [isSidebarBVisible, setSidebarBVisible] = useState(false);
+
+  const handleSidebarAClose = () => {
+    setSidebarAVisible(false);
+    setSidebarBVisible(true);
+  };
+
+  const handleSidebarBClose = () => {
+    setSidebarAVisible(true);
+    setSidebarBVisible(false);
+  };
 
   useEffect(() => {
     const data = JSON.parse(localStorage.getItem("song"));
@@ -24,12 +47,76 @@ const Song = () => {
     setIsPlaying(!isPlaying);
   };
   var s = song?.duration / 60;
-  var secd = song?.duration % 60; //234
+  var secd = song?.duration % 60;
   var seconds = Math.floor(s) + ":" + secd;
 
   return (
     <div className="song">
-      <div className="sidebar"></div>
+      {isSidebarAVisible && (
+        <div className="sidebar1">
+          <div className="close">
+            <CloseIcon
+              style={{ color: "white", float: "right", margin: "10px" }}
+              onClick={handleSidebarAClose}
+            />
+          </div>
+
+          <div className="icons">
+            <AiFillHome size={20} />
+            <h3>Home</h3>
+          </div>
+          <div
+            className="icons"
+            onClick={() => {
+              localStorage.setItem("show", JSON.stringify(true));
+              navigate(-1);
+            }}
+          >
+            <BiSearchAlt2 size={25} />
+            <h3>Search</h3>
+          </div>
+
+          <div className="icons">
+            <div>
+              <BiSolidPlaylist size={25} />
+              <h3>Playlist</h3>
+            </div>
+            <IoAddSharp size={25} style={{ cursor: "pointer" }} />
+          </div>
+        </div>
+      )}
+      {isSidebarBVisible && (
+        <div className="sidebar2">
+          <div className="menu">
+            <MenuIcon
+              style={{ fontSize: "30px" }}
+              onClick={handleSidebarBClose}
+            />
+          </div>
+          <div className="menu" onClick={() => navigate("/")}>
+            <Tooltip title="Home">
+              <AiOutlineHome size={25} />
+            </Tooltip>
+          </div>
+          <div
+            className="menu"
+            onClick={() => {
+              navigate("/search");
+            }}
+          >
+            <Tooltip title="Search">
+              <BiSearchAlt2 size={25} />
+            </Tooltip>
+          </div>
+
+          <div className="menu">
+            <Tooltip title="Expand Your Library">
+              <BiSolidPlaylist size={25} />
+            </Tooltip>
+          </div>
+        </div>
+      )}
+
       <div className="song-det">
         <nav>
           <div className="navbar-search"></div>

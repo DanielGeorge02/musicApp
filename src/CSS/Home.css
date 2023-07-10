@@ -30,7 +30,8 @@
   display: flex;
   flex-direction: column;
   overflow-y: scroll;
-  background-color: blueviolet;
+  background-color: rgb(17, 17, 17);
+  color: white;
 }
 .cont nav {
   height: 10%;
@@ -125,7 +126,7 @@
 }
 
 .home .browse {
-  height: 3%;
+  height: 1%;
   width: 100%;
 }
 .cont .grid {

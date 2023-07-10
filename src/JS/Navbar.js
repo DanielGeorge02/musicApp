@@ -3,18 +3,20 @@ import TextField from "@mui/material/TextField";
 import Avatar from "@mui/material/Avatar";
 import { BiSearch } from "react-icons/bi";
 import { Divider, InputAdornment } from "@mui/material";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import Tooltip from "@mui/material/Tooltip";
 
 const Navbar = ({ show, search, onchangeHandler, container }) => {
   const navigate = useNavigate();
+  const location = useLocation();
   return (
     <nav>
       <div className="navbar-search">
-        {show ? (
+        {location.pathname === "/search" ? (
           <div>
             <div className="search">
               <TextField
+                autoFocus="true"
                 variant="outlined"
                 placeholder="What do you want to listen?"
                 type="text"

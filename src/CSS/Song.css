@@ -16,7 +16,7 @@
 }
 .song-det {
   height: 100%;
-  width: 75%;
+  width: 100%;
 }
 
 .song-det nav {
@@ -120,4 +120,52 @@
   margin-right: 20px;
   margin-top: 5px;
   margin-bottom: 5px;
+}
+
+.sidebar1 {
+  height: 100%;
+  width: 30%;
+  background-color: #000000;
+  position: sticky;
+  float: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+.sidebar1 .icons {
+  display: flex;
+  align-items: center;
+  height: 70px;
+  width: 93%;
+  margin: 10px;
+  border-radius: 20px;
+  color: white;
+  padding-left: 10px;
+}
+.icons h3 {
+  margin-left: 20px;
+}
+.sidebar1 .icons:hover {
+  background-color: rgb(17, 17, 17);
+}
+.sidebar1 .close {
+  width: 100%;
+}
+.song .sidebar2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70px;
+  height: 100%;
+  color: rgb(159, 155, 155);
+  background-color: #000000;
+}
+.sidebar2 .menu {
+  margin-top: 10px;
+  height: 10%;
+  cursor: pointer;
+}
+.sidebar2 .menu:hover {
+  color: white;
 }

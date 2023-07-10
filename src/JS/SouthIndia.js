@@ -71,7 +71,11 @@ const SouthIndia = () => {
           backgroundSize: "cover",
         }}
       >
-        <h4>S.P.Balasubrahmanyam</h4>
+        <h4>
+          S.P.
+          <br />
+          Balasubrahmanyam
+        </h4>
       </div>
       <div
         className="item"

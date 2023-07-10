@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
-
 import "../CSS/Home.css";
 import "../JS/Song";
-
 import Sidebar from "./Sidebar";
 import Hollywood from "./Hollywood";
 import NorthIndia from "./NorthIndia";
@@ -11,13 +9,13 @@ import SouthIndia from "./SouthIndia";
 
 const Home = () => {
   const [search, setSearch] = useState("");
-
   const [container, setContainer] = useState([]);
   const [show, setshow] = useState(false);
 
   useEffect(() => {
     fetchApi();
   }, [search]);
+
   const fetchApi = () => {
     fetch(
       "https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"
@@ -37,7 +35,6 @@ const Home = () => {
           ...new Map(data.data.map((user) => [user.title, user])).values(),
         ];
         setContainer(result);
-        // console.log(setContainer);
       })
       .catch((err) => {
         console.log(err);
